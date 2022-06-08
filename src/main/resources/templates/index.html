@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Myteam</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6">
+                <h1>Myteam</h1>
+                <small>Spring Applikation mit JPA</small>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="list-group">
+                    <div th:each="team : ${list}">
+
+                      <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1" th:text="${'Team ' + team.id}"></h5>
+                        <p class="mb-1" th:text="${team.name}"></p>
+                        <p class="mb-1" th:text="${team.vorname}"></p>
+                        <p class="mb-1" th:text="${team.alter}"></p>
+                        <p class="mb-1" th:text="${team.nationalitaet}"></p>
+                        <p class="mb-1" th:text="${team.club}"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

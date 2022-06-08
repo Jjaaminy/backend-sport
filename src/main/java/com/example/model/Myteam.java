@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class myteam {
+public class Myteam {
     @Id
     @GeneratedValue(
             strategy = GenerationType.AUTO
@@ -19,7 +19,18 @@ public class myteam {
     private int alter;
     private String nationalitaet;
 
-    public myteam() {}
+
+    public Myteam(int id, String name, String vorname, int groesse, String club, int alter, String nationalitaet) {
+        this.id = id;
+        this.name = name;
+        this.vorname = vorname;
+        this.groesse = groesse;
+        this.club = club;
+        this.alter = alter;
+        this.nationalitaet = nationalitaet;
+
+    }
+
 
 
     public int getId() {
