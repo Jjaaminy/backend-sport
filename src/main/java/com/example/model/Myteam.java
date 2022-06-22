@@ -11,7 +11,7 @@ public class Myteam {
     @GeneratedValue(
             strategy = GenerationType.AUTO
     )
-    private int id;
+    private long id;
     private String name;
     private String vorname;
     private int groesse;
@@ -20,24 +20,15 @@ public class Myteam {
     private String nationalitaet;
 
 
-    public Myteam(int id, String name, String vorname, int groesse, String club, int alter, String nationalitaet) {
-        this.id = id;
-        this.name = name;
-        this.vorname = vorname;
-        this.groesse = groesse;
-        this.club = club;
-        this.alter = alter;
-        this.nationalitaet = nationalitaet;
+    public Myteam() {
 
     }
 
-
-
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -93,3 +84,4 @@ public class Myteam {
 
 
 }
+

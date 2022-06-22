@@ -1,4 +1,4 @@
-package com.example.controlle;
+package com.example.controller;
 
 import com.example.service.teamRepostitory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,8 +24,9 @@ public class MainController {
     }
 
     @PostMapping("/")
-    public void deleteteam(@RequestParam(required = true) String id) {
-        System.out.println("delete Joke: " + id);
+    public void deleteTeam(@RequestParam(required = true) String id) {
+        System.out.println("delete Team: " + id);
     }
 
 }
+
