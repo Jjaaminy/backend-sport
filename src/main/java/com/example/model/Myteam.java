@@ -1,16 +1,12 @@
 package com.example.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name="team")
 public class Myteam {
     @Id
-    @GeneratedValue(
-            strategy = GenerationType.AUTO
-    )
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String name;
     private String vorname;
@@ -18,11 +14,6 @@ public class Myteam {
     private String club;
     private int alter;
     private String nationalitaet;
-
-
-    public Myteam() {
-
-    }
 
     public long getId() {
         return id;
